@@ -1,0 +1,38 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static "master/03.css" %}">
+</head>
+<body>
+<form method="post" action="{% url "target" %}">
+    {% csrf_token %}
+    <div class="wrap">
+    {{ data.username.label_tag }}
+    {{ data.username}}
+    {{ data.email.label_tag }}
+    {{ data.email}}
+
+
+
+
+
+
+{#		<div class="avatar">#}
+{#      <img src="http://cdn.ialireza.me/avatar.png">#}
+{#		</div>#}
+{#		<input type="text" name="username" placeholder="username" required>#}
+{#		<div class="bar">#}
+{#			<i></i>#}
+{#		</div>#}
+{#		<input type="password" name="email" placeholder="password" required>#}
+		<button href="{% url "target" %}">Save your information</button>
+	</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block header %}
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static "master/01.css" %}">
+{% endblock %}
+{% block content %}
+<div class="visit"><a href="https://www.j-w-v.com/" target="_blank">Visit the live version here!</a></div>
+<div id="particles-js">
+  <div class="container">
+    <div class="row top">
+      <div class="twelve column">
+        <div class="logo">V</div>
+        <h1>Mohammad Amin Ebrahimi</h1>
+        <h2> Django Developer</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="one-half column">
+        <div class="pens pulled">
+          <h1>Descriptions:</h1>
+            <ul><li><p>I make this website just for an exercise</p></li></ul>
+        </div>
+      </div>
+
+      <div class="one-half column">
+        <div class="posts pulled">
+          <h1>Features:</h1>
+            <ul>
+                <li><p>+) Connecting the login page and the about page to the database</p></li>
+                <li><p>+) Django Panel</p></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container ">
+  <div class="footer">
+  <p>Using this templates from <a href="https://codepen.io/">Codepen</a>, <a href="https://templatemo.com/">templatemo</a> & <a href="http://getskeleton.com/">Skeleton.css</a></p> </div></div>
+  </div>
+    <script rel="stylesheet" href="{% static "master/01.js" %}"></script>
+{% endblock %}
