@@ -1,0 +1,42 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "product/02.css" %}">
+    <title>{{ data.slug }}</title>
+</head>
+<body>
+<div class="product">
+  <div class="product--title">
+    <h2>{{ data.name }} detial</h2>
+  </div>
+  <div class="product--body">
+  <div class="product--image">
+    <div class="icon-images">
+      <img src="static/img/{{ data.link_img }}"/>
+      <img src="{{ data.link_img }}"/>
+      <img src="{{ data.link_img }}"/>
+    </div>
+    <img src="http://stalkbuylove.com/media/catalog/product/cache/1/image/393x502/9df78eab33525d08d6e5fb8d27136e95/i/n/in1335avv-167-back.jpg" class="display-img">
+  </div>
+  <div class="product--details">
+  <div class="product--price">
+    <span class="product--price_price">Rs. 800</span>
+    <span class="product--price_offer">new arrivel !</span>
+  </div>
+    <div class="product--desc"><p>{{ data.description }}</p></div>
+  <div class="product--size">
+
+
+    <div class="add-to-cart">
+      <button class="btn btn--cart">buy it!</button>
+    </div>
+  </div>
+  </div>
+</div>
+</body>
+</html>

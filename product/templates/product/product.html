@@ -1,0 +1,72 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "product/01.css" %}">
+</head>
+<body>
+<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Navbar in Bootstrap</title>
+    </head>
+<body>
+  <header>
+    <div class="col-sm-12 jumbotron text-center">
+      <h2>Welcome to our Lifestyle Store!</h2>
+      <h6>We have the best cameras,watches and shirts for you. No need to hunt around, we have all in one place</h6>
+    </div>
+  </header>
+
+  <!--Carousel Trial-->
+
+  <!---->
+  <section>
+
+    <div class="container col-sm-10 col-sm-offset-1">
+
+      <div class="row">
+
+
+          {% for d in data %}
+                  <div class="col-sm-4">
+
+          <div class="thumbnail">
+
+            <img src="{{ d.link_img }}" class="img-responsive" alt="">
+
+            <div class="caption">
+
+              <h4>{{ d.name }}</h4>
+              <h6>{{ d.title }}</h6>
+              <h5><a href="{{ d.slug }}" class="label label-success">Rs.{{ d.price }}</a></h5>
+              <!--button type="submit" class="btn btn-primary btn-block">ADD TO CART</button-->
+
+            </div>
+
+          </div><!-- End of div thumbnail-->
+        </div><!--End of div col-sm-4 -->
+
+          {% endfor %}
+
+
+
+
+    </div>
+
+      </footer>
+</body>
+</body>
+</html>
